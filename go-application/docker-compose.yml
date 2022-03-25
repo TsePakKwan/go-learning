@@ -17,7 +17,7 @@ services:
 
   web:
     container_name: go_app
-    # command: bash -c "go run cmd/migrate/main.go -exec up"
+    # command: go run cmd/migrate/main.go -exec up
     platform: 'linux/amd64'
     build: ./service
     tty: true
