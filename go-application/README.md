@@ -1,3 +1,5 @@
+# set up
+``docker compose up -d --build``
 
 # マイグレーション
 ``RUN go run cmd/migrate/main.go -exec up``
