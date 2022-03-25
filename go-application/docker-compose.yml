@@ -6,10 +6,9 @@ services:
     platform: 'linux/amd64'
     build: ./mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-      TZ: Asia/Tokyo
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      TZ: ${DB_LOC}
     volumes:
       - go-db:/var/lib/mysql
       - ./mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
